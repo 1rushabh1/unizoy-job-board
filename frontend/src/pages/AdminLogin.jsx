@@ -13,7 +13,7 @@ export default function AdminLogin(){
     try{
 
       const res = await axios.post(
-        "https://unizoy-job-board1.onrender.com/api/admin/login",
+        "https://unizoy-job-board-backend11.onrender.com/api/admin/login",
         { email, password }
       )
 

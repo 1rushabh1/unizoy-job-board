@@ -12,8 +12,8 @@ const [editingId,setEditingId] = useState(null)
 
 const navigate = useNavigate()
 
-const JOB_API = "https://unizoy-job-board1.onrender.com/api/jobs"
-const APP_API = "https://unizoy-job-board1.onrender.com/api/apply"
+const JOB_API = "https://unizoy-job-board-backend11.onrender.com/api/jobs"
+const APP_API = "https://unizoy-job-board-backend11.onrender.com/api/apply"
 
 
 // AUTH CHECK
