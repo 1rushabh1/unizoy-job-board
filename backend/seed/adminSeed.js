@@ -1,3 +1,5 @@
+require("dotenv").config()
+
 const mongoose = require("mongoose")
 const bcrypt = require("bcryptjs")
 const Admin = require("../models/Admin")
@@ -6,10 +8,10 @@ async function seedAdmin(){
 
   try{
 
-    await mongoose.connect("mongodb://127.0.0.1:27017/unizoy_jobs")
+    await mongoose.connect(process.env.MONGO_URI)
 
     const existingAdmin = await Admin.findOne({
-      email:"admin@unizoy.com"
+      email: "admin@unizoy.com"
     })
 
     if(existingAdmin){
@@ -20,8 +22,8 @@ async function seedAdmin(){
     const hashedPassword = await bcrypt.hash("123456",10)
 
     const admin = new Admin({
-      email:"admin@unizoy.com",
-      password:hashedPassword
+      email: "admin@unizoy.com",
+      password: hashedPassword
     })
 
     await admin.save()
@@ -33,7 +35,6 @@ async function seedAdmin(){
   }catch(err){
 
     console.log(err)
-
     process.exit()
 
   }
