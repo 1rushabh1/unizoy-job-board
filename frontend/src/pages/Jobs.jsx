@@ -9,7 +9,7 @@ export default function Jobs() {
   const navigate = useNavigate()
 
   useEffect(()=>{
-    axios.get("http://localhost:5000/api/jobs")
+    axios.get("https://unizoy-job-board1.onrender.com/api/jobs")
     .then(res=>setJobs(res.data))
     .catch(err=>console.log(err))
   },[])

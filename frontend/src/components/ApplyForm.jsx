@@ -9,7 +9,7 @@ export default function ApplyForm({jobId}){
 
   const apply = async () => {
 
-    await axios.post("http://localhost:5000/api/apply",{
+    await axios.post("https://unizoy-job-board1.onrender.com/api/apply",{
       jobId,
       name,
       email,
