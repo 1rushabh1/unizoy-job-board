@@ -37,3 +37,8 @@ Frontend:
 
 npm install
 npm run dev
+
+## Admin Dummy Password
+
+email : admin@unizoy.com
+password : 123456
